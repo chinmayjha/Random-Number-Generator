@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Number Generator | Modern Web App</title>
+    <meta
+      name="description"
+      content="Generate random numbers instantly with our modern, responsive web application. Set your range and get results in real-time."
+    />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="random number generator, random numbers, number picker, dice roll, statistics tool, web app" />
+    <meta name="author" content="Chinmay" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Random Number Generator | Modern Web App" />
+    <meta property="og:description" content="Generate random numbers instantly with our modern, responsive web application. Perfect for games, statistics, and decision-making." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chinmayjha.tech/Random-Number-Generator/" />
+    <meta property="og:site_name" content="Random Number Generator" />
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Random Number Generator | Modern Web App" />
+    <meta name="twitter:description" content="Generate random numbers instantly with our modern, responsive web application." />
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <a href="index.html">
+            <i class="fas fa-dice"></i>
+            Random Number Generator
+          </a>
+        </div>
+        <nav class="nav-menu">
+          <a href="#home" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a
+            href="https://github.com/chinmayjha/Random-Number-Generator"
+            class="nav-link"
+            target="_blank"
+          >
+            <i class="fab fa-github"></i> Star this Project
+          </a>
+        </nav>
+        <div class="hamburger" id="hamburger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">
+              <span class="gradient-text">Random Number</span>
+              <span class="hero-title-accent">Generator</span>
+            </h1>
+            <p class="hero-description">
+              Generate random numbers instantly with our modern, intuitive
+              interface. Perfect for games, statistics, and more!
+            </p>
+          </div>
+
+          <!-- Generator Card -->
+          <div class="generator-card">
+            <div class="card-header">
+              <h3><i class="fas fa-random"></i> Generate Random Number</h3>
+            </div>
+            <div class="card-body">
+              <div class="input-group">
+                <label for="maxNumber">Maximum Number (0-999)</label>
+                <input
+                  type="number"
+                  id="maxNumber"
+                  value="100"
+                  min="1"
+                  max="999"
+                  placeholder="Enter max number"
+                />
+                <span class="error-message" id="errorMessage">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  Number must be between 1 and 999
+                </span>
+              </div>
+
+              <button class="generate-btn">
+                <i class="fas fa-dice"></i>
+                Generate Random Number
+              </button>
+
+              <div class="result-container" id="resultContainer">
+                <div class="result-label">Your Random Number:</div>
+                <div class="result-number" id="resultNumber">0</div>
+                <button class="copy-btn" id="copyBtn">
+                  <i class="fas fa-copy"></i> Copy
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="about-section">
+        <div class="container">
+          <h2 class="section-title">About This Project</h2>
+          <div class="about-content">
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="fas fa-rocket"></i>
+              </div>
+              <h3>Modern & Fast</h3>
+              <p>
+                Built with modern web technologies for lightning-fast
+                performance and smooth user experience.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="fas fa-mobile-alt"></i>
+              </div>
+              <h3>Fully Responsive</h3>
+              <p>
+                Works perfectly on all devices - desktop, tablet, and mobile.
+                Optimized for every screen size.
+              </p>
+            </div>
+
+            <div class="about-card">
+              <div class="about-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <h3>Input Validation</h3>
+              <p>
+                Smart input validation ensures you always get valid results
+                within the specified range.
+              </p>
+            </div>
+          </div>
+
+          <div class="about-text">
+            <p>
+              This Random Number Generator was created to provide a simple,
+              elegant solution for generating random numbers. Whether you need
+              it for games, statistics, decision-making, or just for fun, this
+              tool delivers reliable results with a beautiful, modern interface.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer start -->
+    <footer class="foot">
+      <p class="credit">
+        Made with ❤️ by
+        <a href="https://chinmayjha.tech" class="chinmay-link" rel="noopener"
+          >Chinmay</a
+        >
+      </p>
+      <span class="copyright" id="copyright"></span>
+    </footer>
+    <!-- Footer end -->
+    <script>
+      // Immediate hamburger functionality - works before main JS loads
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('Immediate script: DOM loaded');
+        
+        const hamburger = document.getElementById('hamburger-menu');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (hamburger && navMenu) {
+          console.log('Immediate script: Elements found, adding listeners');
+          
+          function toggleMenu() {
+            console.log('Immediate script: Toggle called');
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            if (navMenu.classList.contains('active')) {
+              document.body.style.overflow = 'hidden';
+              console.log('Menu opened');
+            } else {
+              document.body.style.overflow = '';
+              console.log('Menu closed');
+            }
+          }
+          
+          // Multiple event listeners for maximum compatibility
+          hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
+          });
+          
+          hamburger.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            toggleMenu();
+          }, { passive: false });
+          
+          // Close menu when clicking nav links
+          const navLinks = document.querySelectorAll('.nav-link');
+          navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+              hamburger.classList.remove('active');
+              navMenu.classList.remove('active');
+              document.body.style.overflow = '';
+            });
+          });
+          
+          // Close menu when clicking outside
+          document.addEventListener('click', function(e) {
+            if (navMenu.classList.contains('active') && 
+                !navMenu.contains(e.target) && 
+                !hamburger.contains(e.target)) {
+              hamburger.classList.remove('active');
+              navMenu.classList.remove('active');
+              document.body.style.overflow = '';
+            }
+          });
+        } else {
+          console.log('Immediate script: Elements not found');
+        }
+      });
+    </script>
+    <script src="index.js"></script>
+
+    <!-- Developer Info Button (Bottom Left) -->
+    <div class="developer-info-btn" id="developerInfoBtn">
+        <span class="developer-avatar">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                <circle cx="12" cy="7" r="4"/>
+            </svg>
+        </span>
+        <span class="developer-tooltip">About Developer</span>
+    </div>
+
+    <!-- Developer Info Modal -->
+    <div class="developer-overlay" id="developerOverlay" style="display:none;"></div>
+    <div class="developer-modal" id="developerModal" role="dialog" aria-modal="true" aria-labelledby="developerTitle" style="display:none;">
+        <button class="close-btn" id="closeDeveloperBtn" aria-label="Close Developer Info">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="developer-modal-content">
+            <div class="developer-header">
+                <div class="developer-photo">
+                    <img src="https://chinmayjha.tech/assets/img/favicon.jpg" alt="Chinmay Jha" class="developer-image">
+                </div>
+                <h2 class="developer-name" id="developerTitle">Chinmay Jha</h2>
+                <p class="developer-role">Student • Web Developer • Freelancer</p>
+            </div>
+            <div class="developer-bio">
+                <p>Hi, I'm Chinmay Jha, a 16-year-old web developer from India. I started coding at 11 with HTML and CSS, and since then, I've been building all kinds of fun and functional web projects—from simple websites to Discord bots. Over time, I've picked up JavaScript and now focus on creating clean, user-friendly interfaces.</p>
+                <p>This stopwatch is one of my personal projects, built to combine both functionality and aesthetics. I'm always experimenting and learning new things, and projects like this help me push my creativity and skills a little further each time.</p>
+            </div>
+            <div class="developer-links">
+                <a href="https://chinmayjha.tech" target="_blank" rel="noopener" class="developer-link website-link">
+                    <span class="link-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <line x1="2" y1="12" x2="22" y2="12"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                    </span>
+                    <span class="link-text">Visit Website</span>
+                    <span class="link-url">chinmayjha.tech</span>
+                </a>
+                <a href="mailto:chinmayjha2021@gmail.com" class="developer-link email-link">
+                    <span class="link-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </span>
+                    <span class="link-text">Send Email</span>
+                    <span class="link-url">contact@chinmayjha.tech</span>
+                </a>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
